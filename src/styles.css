@@ -1,0 +1,129 @@
+body {
+  background: radial-gradient(
+    666px at 0.4% 48%,
+    rgb(202, 204, 227) 0%,
+    rgb(89, 89, 99) 97.5%
+  );
+}
+span {
+  position: relative;
+  left: 255px;
+}
+h1 {
+  position: relative;
+  left: -140px;
+  bottom: -44px;
+}
+h2 {
+  position: relative;
+  left: -222px;
+  bottom: -44px;
+  font-size: 22px;
+}
+h3 {
+  position: relative;
+  left: 44px;
+  top: -77px;
+  font-size: 12px;
+}
+h4 {
+  position: relative;
+  bottom: 22px;
+  left: px;
+  font-size: 30px;
+  right: 212px;
+}
+.pressButton {
+  display: block;
+  margin: 0 auto;
+  position: fixed;
+  left: 188px;
+  margin-left: 200px;
+  top: 111px;
+  color: #ffff;
+  border-color: rgb(245, 4, 253);
+  background: radial-gradient(
+    circle at -2% -25%,
+    rgb(250, 66, 255) 0%,
+    rgba(255, 213, 136, 0.97) 100.7%
+  );
+  box-shadow: 5px 6px 28px rgba(33, 33, 44, 55);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  transition: 22px;
+  padding: 12px;
+  border-radius: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+button:hover {
+  color: rgb(255, 255, 255);
+  border: 7.7px solid #00ff40;
+
+  background: linear-gradient(to right, rgb(52, 232, 158), rgb(15, 52, 67));
+}
+.form-control {
+  display: block;
+  margin: 0 auto;
+  margin-top: 170px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-left: 111px;
+}
+.button {
+  display: block;
+  margin: 0 auto;
+  position: fixed;
+  left: 166px;
+  margin-left: 200px;
+  top: 169px;
+  color: #ffff;
+  border-color: rgb(245, 4, 253);
+  background: radial-gradient(
+    circle at 52.1% -29.6%,
+    rgb(144, 17, 105) 0%,
+    rgb(51, 0, 131) 100.2%
+  );
+  box-shadow: 5px 6px 28px rgba(33, 33, 44, 55);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  transition: 22px;
+  padding: 12px;
+  border-radius: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.button:hover {
+  color: rgb(255, 255, 255);
+  border: 7.7px solid #00ff40;
+
+  background: linear-gradient(
+    110.7deg,
+    rgb(255, 81, 47) 1.7%,
+    rgb(255, 167, 47) 8.2%,
+    rgb(218, 253, 1) 16.2%,
+    rgb(98, 234, 20) 23.4%,
+    rgb(69, 193, 42) 32.8%,
+    rgb(7, 249, 149) 43.7%,
+    rgb(6, 200, 217) 55.3%,
+    rgb(18, 51, 233) 65.5%,
+    rgb(122, 59, 202) 74.5%,
+    rgb(231, 7, 249) 82.3%,
+    rgb(202, 59, 163) 91.4%
+  );
+}
+.line {
+  position: relative;
+  top: -187px;
+  right: -222px;
+  left: 180px;
+  font-size: 44px;
+  font-family: "PT Mono", monospace;
+  font-weight: 30px;
+  color: blue;
+  text-shadow: 1px 1px 2px rgb(238, 255, 1);
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 4px #ff00de,
+    0 0 79px #19ffe0, 0 0 80px #14d0ff, 0 0 10px #ff00de;
+}
