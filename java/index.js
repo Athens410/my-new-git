@@ -91,3 +91,28 @@ currentLocationButton.addEventListener("click", function () {
     h4.innerHTML = "Geolocation is not supported by this browser.";
   }
 });
+updateHeading();
+
+async function updateHeading(city = null, latitude = null, longitude = null) {
+  let h3 = document.querySelector("h3");
+  let h4 = document.querySelector("h4");
+  try {
+    let data;
+    if (!city) {
+      // If no city is provided, get the weather data for a random city
+      let cities = ["London", "Paris", "New York", "Tokyo", "Sydney"];
+      let randomCity = cities[Math.floor(Math.random() * cities.length)];
+      data = await getWeatherData(randomCity);
+    } else {
+      // Otherwise, get the weather data for the provided city
+      data = await getWeatherData(city, latitude, longitude);
+    }
+    let temperature = data.main.temp;
+    let cityName = data.name;
+    h4.innerHTML = `It is ${temperature}°C in ${cityName}`;
+    h3.innerHTML = `Precipitation: ${data.weather[0].description} | Humidity: ${data.main.humidity}%`;
+  } catch (error) {
+    h4.innerHTML = `Could not retrieve weather data for ${city}`;
+    h3.innerHTML = "";
+  }
+}
