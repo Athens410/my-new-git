@@ -142,5 +142,19 @@ button:hover {
   max-width: 600px;
   margin: 30px auto;
   padding: 40px;
-  border: 2px solid #00ff40;
+  border: 2px solid ;
+  
+}
+html,
+body {
+  height: 100%;
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
