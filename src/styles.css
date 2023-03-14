@@ -1,9 +1,5 @@
-body {
-  background: radial-gradient(
-    666px at 0.4% 48%,
-    rgb(202, 204, 227) 0%,
-    rgb(89, 89, 99) 97.5%
-  );
+body{
+  margin:auto;
 }
 span {
   position: relative;
