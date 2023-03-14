@@ -42,7 +42,7 @@ h4 {
   margin: 0 auto;
  position: fixed;
  top: 133px;
- right: 377px;
+ right: 399px;
 
   
 
@@ -87,7 +87,7 @@ button:hover {
   margin: 0 auto;
   position: fixed;
   top: 188px;
-    right: 355px;
+    right: 384px;
   color: #ffff;
   border-color: rgb(245, 4, 253);
   background: radial-gradient(
@@ -137,4 +137,10 @@ button:hover {
   text-shadow: 1px 1px 2px rgb(238, 255, 1);
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 4px #ff00de,
     0 0 79px #19ffe0, 0 0 80px #14d0ff, 0 0 10px #ff00de;
+}
+.weather-app{
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 40px;
+  border: 2px solid #00ff40;
 }
