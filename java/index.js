@@ -93,10 +93,10 @@ currentLocationButton.addEventListener("click", function () {
 });
 updateHeading();
 
-async function updateHeading(city = null, latitude = null, longitude = null) {
-  let h3 = document.querySelector("h3");
-  let h4 = document.querySelector("h4");
-  try {
+async function newUpdateHeading(city = null, latitude = null, longitude = null) {
+  
+}
+
     let data;
     if (!city) {
       // If no city is provided, get the weather data for a random city
