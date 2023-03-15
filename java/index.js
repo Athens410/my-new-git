@@ -46,17 +46,34 @@ async function getWeatherData(city, latitude = null, longitude = null) {
 async function updateHeading(city, latitude = null, longitude = null) {
   let h3 = document.querySelector("h3");
   let h4 = document.querySelector("h4");
+   let iconElement = document.querySelector("#icon");
+  
+   
+   
   try {
     let data = await getWeatherData(city, latitude, longitude);
     let temperature = data.main.temp;
     let precipitation = data.weather[0].description;
     let humidity = data.main.humidity;
+    
+    
+    
+   
     h4.innerHTML = `It is ${temperature}°C in ${city}`;
     h3.innerHTML = `Precipitation: ${precipitation} | Humidity: ${humidity}%`;
+    let iconCode = data.weather[0].icon;
+    let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    iconElement.setAttribute("src", iconUrl);
+
+    
   } catch (error) {
     h4.innerHTML = `Could not retrieve weather data for ${city}`;
     h3.innerHTML = "";
   }
+   
+       
+
+
   
 }
 updateHeading("North Carolina");
