@@ -20,6 +20,7 @@ text-align: center;
   margin-top: 122px;
   margin-bottom: 100px;
   font-size: 22px;
+  color: azure;
 }
 h3 {
   text-align: center;
@@ -28,12 +29,17 @@ h3 {
     margin-right: 111px;
     padding-bottom: 200px;
   font-size: 12px;
+  color: #14d0ff;
+ 
 }
 h4 {
  text-align: center;
  margin-left: -300px;
  margin-right: 111px;
   font-size: 30px;
+  
+  text-shadow: 10px 10px 10px rgb(255, 242, 0);
+    color: #e510f5;
   
 }
 .pressButton {
