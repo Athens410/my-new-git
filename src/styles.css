@@ -1,8 +1,8 @@
-body{
-  margin:auto;
-  background:linear-gradient(138deg, rgb(32, 201, 255) 36.7%, rgb(0, 8, 187) 84.4%, rgb(255, 255, 255) 119.7%);
-  
-  
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/900/original/pexels-pixabay-209831.jpg?1678907168') no-repeat center center fixed;
+  background-size: cover;
 }
 span {
   position: relative;
@@ -144,16 +144,9 @@ button:hover {
   border: 2px solid #ff00de ;
   
 }
-html,
- body {
-  height: 100%;
+.github{
+  color: #00ff40;
 }
 
-.sky  {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-}
+
+
