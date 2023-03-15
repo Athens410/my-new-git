@@ -16,6 +16,18 @@ h2.innerHTML = `Today is ${dayOfWeek}, ${month} ${date}, ${hours}:${minutes}, ${
 let apiKey = "c75a59350314fa95778c2435a9112873";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
+
+
+
+
+
+
+
+
+
+
+
+
 async function getWeatherData(city, latitude = null, longitude = null) {
   try {
     let url = `${apiUrl}?q=${city}&units=metric&appid=${apiKey}`;
@@ -45,7 +57,9 @@ async function updateHeading(city, latitude = null, longitude = null) {
     h4.innerHTML = `Could not retrieve weather data for ${city}`;
     h3.innerHTML = "";
   }
+  
 }
+updateHeading("North Carolina");
 
 let pressButton = document.querySelector(".pressButton");
 pressButton.addEventListener("click", function () {
@@ -91,28 +105,8 @@ currentLocationButton.addEventListener("click", function () {
     h4.innerHTML = "Geolocation is not supported by this browser.";
   }
 });
-updateHeading();
 
-async function newUpdateHeading(city = null, latitude = null, longitude = null) {
-  
-}
 
-    let data;
-    if (!city) {
-      // If no city is provided, get the weather data for a random city
-      let cities = ["London", "Paris", "New York", "Tokyo", "Sydney"];
-      let randomCity = cities[Math.floor(Math.random() * cities.length)];
-      data = await getWeatherData(randomCity);
-    } else {
-      // Otherwise, get the weather data for the provided city
-      data = await getWeatherData(city, latitude, longitude);
-    }
-    let temperature = data.main.temp;
-    let cityName = data.name;
-    h4.innerHTML = `It is ${temperature}°C in ${cityName}`;
-    h3.innerHTML = `Precipitation: ${data.weather[0].description} | Humidity: ${data.main.humidity}%`;
-  } catch (error) {
-    h4.innerHTML = `Could not retrieve weather data for ${city}`;
-    h3.innerHTML = "";
-  }
-}
+
+
+    
