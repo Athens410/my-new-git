@@ -58,12 +58,14 @@ async function updateHeading(city, latitude = null, longitude = null) {
     let temperature = data.main.temp;
     let precipitation = data.weather[0].description;
     let humidity = data.main.humidity;
+     let windSpeed = data.wind.speed;
+    let weatherDescription = data.weather[0].description;
    
     
     
    
     h4.innerHTML = `It is ${temperature}°C in ${city}`;
-    h3.innerHTML = `Precipitation: ${precipitation} | Humidity: ${humidity}%`;
+    h3.innerHTML = `Precipitation: ${precipitation} | Humidity: ${humidity}%`| WindSpeed: ${windSpeed} m/s | Weather-Description: ${weatherDescription}`;
     let iconCode = data.weather[0].icon;
     let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
      
