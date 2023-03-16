@@ -55,7 +55,7 @@ async function updateHeading(city, latitude = null, longitude = null) {
    
   try {
     let data = await getWeatherData(city, latitude, longitude);
-    let temperature = data.main.temp;
+    let temperature = Math.round(data.main.temp);
     let precipitation = data.weather[0].description;
     let humidity = data.main.humidity;
      let windSpeed = data.wind.speed;
@@ -87,6 +87,7 @@ async function updateHeading(city, latitude = null, longitude = null) {
 
 
 let fahrenheitElement = document.querySelector("#fahrenheit");
+
 function displayFahrenheitTempature (event){
   event.preventDefault();
   let FahrenheitTempature = (celsiusTempature * 9)/5 + 32;
