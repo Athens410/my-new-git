@@ -36,6 +36,7 @@ async function getWeatherData(city, latitude = null, longitude = null) {
     }
     let response = await axios.get(url);
     console.log(response.data);
+     celsiusTempature = response.data.main.temp;
     return response.data;
   } catch (error) {
     console.log(error.response.data.message);
@@ -47,7 +48,9 @@ async function updateHeading(city, latitude = null, longitude = null) {
   let h3 = document.querySelector("h3");
   let h4 = document.querySelector("h4");
    let iconElement = document.querySelector("#icon");
-  
+   
+   
+    
    
    
   try {
@@ -55,7 +58,7 @@ async function updateHeading(city, latitude = null, longitude = null) {
     let temperature = data.main.temp;
     let precipitation = data.weather[0].description;
     let humidity = data.main.humidity;
-    
+   
     
     
    
@@ -63,8 +66,9 @@ async function updateHeading(city, latitude = null, longitude = null) {
     h3.innerHTML = `Precipitation: ${precipitation} | Humidity: ${humidity}%`;
     let iconCode = data.weather[0].icon;
     let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+     
     iconElement.setAttribute("src", iconUrl);
-
+    
     
   } catch (error) {
     h4.innerHTML = `Could not retrieve weather data for ${city}`;
@@ -76,9 +80,29 @@ async function updateHeading(city, latitude = null, longitude = null) {
 
   
 }
-updateHeading("North Carolina");
 
-let pressButton = document.querySelector(".pressButton");
+ let celsiusTempature = null;
+
+
+let fahrenheitElement = document.querySelector("#fahrenheit");
+function displayFahrenheitTempature (event){
+  event.preventDefault();
+  let FahrenheitTempature = (celsiusTempature * 9)/5 + 32;
+ 
+ 
+  let temperatureElement = document.querySelector("#number");
+  temperatureElement.innerHTML = Math.round(FahrenheitTempature);
+
+ }
+  fahrenheitElement.addEventListener("click",displayFahrenheitTempature);
+
+
+
+
+
+
+
+  let pressButton = document.querySelector(".pressButton");
 pressButton.addEventListener("click", function () {
   let searchInput = document.querySelector("#city-input").value;
   if (searchInput) {
@@ -123,7 +147,7 @@ currentLocationButton.addEventListener("click", function () {
   }
 });
 
-
+updateHeading("North Carolina");
 
 
     
