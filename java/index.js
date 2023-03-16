@@ -65,10 +65,10 @@ async function updateHeading(city, latitude = null, longitude = null) {
     
    
     h4.innerHTML = `It is ${temperature}°C in ${city}`;
-    h3.innerHTML = `Precipitation: ${precipitation} | Humidity: ${humidity}%`| WindSpeed: ${windSpeed} m/s | Weather-Description: ${weatherDescription}`;
+    h3.innerHTML = `Precipitation: ${precipitation} | Humidity: ${humidity}% | WindSpeed: ${windSpeed} m/s | Weather-Description: ${weatherDescription}`;
     let iconCode = data.weather[0].icon;
     let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-     
+   
     iconElement.setAttribute("src", iconUrl);
     
     
