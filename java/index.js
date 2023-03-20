@@ -77,6 +77,13 @@ forecastElement.innerHTML = forecastHTML;
 
 
 }
+function getForecast(coordinates){
+ console.log(coordinates.lat);
+
+
+
+
+}
 
 
 
@@ -101,6 +108,7 @@ async function getWeatherData(city, latitude = null, longitude = null) {
     console.log(error.response.data.message);
     return null;
   }
+   getForecast(response.data.coord);
 }
 
 async function updateHeading(city, latitude = null, longitude = null) {
@@ -119,7 +127,6 @@ async function updateHeading(city, latitude = null, longitude = null) {
     let humidity = data.main.humidity;
      let windSpeed = data.wind.speed;
     let weatherDescription = data.weather[0].description;
-   
     
     
    
