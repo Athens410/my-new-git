@@ -17,7 +17,98 @@ let apiKey = "c75a59350314fa95778c2435a9112873";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
 
+function displayForecast(){
+let forecastElement = document.querySelector("#forecast");
+let forecastHTML = `<div class = "row">`;
+forecastHTML = 
+forecastHTML +
 
+
+`
+<div class="col-2">
+	<div class="weather-forecast-date">
+
+	Tuesday
+	</div>
+              
+
+<img src="https://openweathermap.org/img/wn/10d@2x.png"
+alt="" 
+width="36"
+class="img" />
+
+
+<div class="new-temp">
+<span class="weather-forecast-max">
+ 18°
+
+</span>
+<span class="weather-forecast-min">
+	12°
+</span>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+`;
+
+
+
+forecastHTML =
+forecastHTML +
+`
+<div class="col-2">
+	<div class="weather-forecast-date">
+
+	Tuesday
+	</div>
+              
+
+<img src="https://openweathermap.org/img/wn/10d@2x.png"
+alt="" 
+width="36"
+class="img" />
+
+
+<div class="new-temp">
+<span class="weather-forecast-max">
+ 18°
+
+</span>
+<span class="weather-forecast-min">
+	12°
+</span>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+`;
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+
+
+
+
+
+
+
+}
 
 
 
@@ -151,6 +242,7 @@ currentLocationButton.addEventListener("click", function () {
 });
 
 updateHeading("North Carolina");
+displayForecast();
 
 
     
