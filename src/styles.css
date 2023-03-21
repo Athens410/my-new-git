@@ -33,7 +33,9 @@ h3 {
  
 }
 h4 {
- text-align: center;
+ position: relative;
+ top: -66px;
+ left: -199px;
  margin-left: -300px;
  margin-right: 111px;
   font-size: 30px;
@@ -43,31 +45,21 @@ h4 {
   
 }
 .pressButton {
-  display: block;
-  margin: 0 auto;
- position: fixed;
- top: 133px;
- right: 399px;
-
-  
-
+  position: absolute;
+  top: 288px;
+  right: 477px;
   
   color: #ffff;
   border-color: rgb(245, 4, 253);
-  background: radial-gradient(
-    circle at -2% -25%,
-    rgb(250, 66, 255) 0%,
-    rgba(255, 213, 136, 0.97) 100.7%
-  );
+  background: radial-gradient(circle at -2% -25%,
+      rgb(250, 66, 255) 0%,
+      rgba(255, 213, 136, 0.97) 100.7%);
   box-shadow: 5px 6px 28px rgba(33, 33, 44, 55);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  transition: 22px;
-  padding: 12px;
+  padding: 12px 30px;
   border-radius: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 button:hover {
   color: rgb(255, 255, 255);
@@ -88,11 +80,9 @@ button:hover {
  
 }
 .button {
-  display: block;
-  margin: 0 auto;
-  position: fixed;
-  top: 188px;
-    right: 384px;
+position: absolute;
+  top: 377px;
+  right: 444px;
   color: #ffff;
   border-color: rgb(245, 4, 253);
   background: radial-gradient(
@@ -154,8 +144,11 @@ button:hover {
   color: #00ff40;
 }
 
-.cloud .units{
-  font-size: 23px;
+.units{
+  font-size: 22px;
+  position: absolute;
+  top: 30px; 
+  right:-55px;
 }
 
 
