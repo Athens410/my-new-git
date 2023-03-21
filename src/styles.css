@@ -147,8 +147,10 @@ position: absolute;
 .units{
   font-size: 22px;
   position: absolute;
-  top: 30px; 
-  right:-55px;
+  top: 22px; 
+  left: -100px;
+  color: #ff00de;
+  
 }
 
 
