@@ -179,6 +179,7 @@ async function updateHeading(city, latitude = null, longitude = null) {
  let h3 = document.querySelector("h3");
  let h4 = document.querySelector("h4");
   let iconElement = document.querySelector("#icon");
+  
  
  
   
@@ -239,7 +240,7 @@ function displayFahrenheitTempature (event){
 
 
 
-
+ 
 
 
 
@@ -295,3 +296,13 @@ currentLocationButton.addEventListener("click", function () {
 
 
 updateHeading("North Carolina");
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
